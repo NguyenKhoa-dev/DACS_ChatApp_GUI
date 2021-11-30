@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index-style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header id="header">   
+        <h1>Chat application</h1>     
+        <div id="info">
+            <div id="user">
+                <div id="img-user"><img src="imgs/Logo_Group_MRL_01.png" alt="img-user"></div>
+                <div id="user-name">Welcome,<span>Admin</span></div>                
+            </div>
+            <div id="setting"><ion-icon class="btn-setting" name="settings"></ion-icon></div>
+            <ul class="setting-menu">
+                <li><a href="">Change Password</a></li>
+                <li><a href="">Profile</a></li>
+                <li><a href="">Friends</a></li>
+                <li><a href="">My Rooms</a></li>
+                <li><a href="">Delete Account</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="room-content">
+        <div class="left-bx">
+            <h2>Room Name: <span>Room For Chat</span></h2>
+            <div id="message-list">
+                <div class="message-display">
+                    <h3>MinoIT <span class="date-create">11/11/2021 14:30</span></h3>
+                    <p class="message-content">
+                        Xin chào mọi người, mình là MinoIT.
+                    </p>
+                </div>
+                <div class="message-display">
+                    <h3>MinoIT <span class="date-create">11/11/2021 14:30</span></h3>
+                    <p class="message-content">
+                        Xin chào mọi người, mình là MinoIT.
+                    </p>
+                </div>
+                <div class="message-display">
+                    <h3>MinoIT <span class="date-create">11/11/2021 14:30</span></h3>
+                    <p class="message-content">
+                        Xin chào mọi người, mình là MinoIT.
+                    </p>
+                </div>
+                <div class="message-display">
+                    <h3>MinoIT <span class="date-create">11/11/2021 14:30</span></h3>
+                    <p class="message-content">
+                        Xin chào mọi người, mình là MinoIT.
+                    </p>
+                </div>
+                <div class="message-display">
+                    <h3>MinoIT <span class="date-create">11/11/2021 14:30</span></h3>
+                    <p class="message-content">
+                        Xin chào mọi người, mình là MinoIT.
+                    </p>
+                </div>
+                <div class="message-display">
+                    <h3>MinoIT <span class="date-create">11/11/2021 14:30</span></h3>
+                    <p class="message-content">
+                        Xin chào mọi người, mình là MinoIT.
+                    </p>
+                </div>
+                <div class="message-display">
+                    <h3>MinoIT <span class="date-create">11/11/2021 14:30</span></h3>
+                    <p class="message-content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio ullam aliquid eius, eligendi odit deleniti ex rem facere ea laudantium, itaque officiis necessitatibus provident quas, quidem excepturi dolor magnam atque consequuntur modi vel. Ratione perspiciatis nobis dolore nesciunt repellendus commodi. Beatae impedit quidem deleniti vitae quam accusantium! Voluptatum, quo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima optio vel reiciendis accusantium ea pariatur consequatur, fugiat voluptatum harum neque maxime. Consequatur consectetur delectus harum quod minus, itaque quisquam dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi repellendus iste in? Aut maiores labore maxime, vel aperiam eius commodi voluptatibus ad molestiae ipsam laudantium eos explicabo. Sed, at facilis iure quisquam doloribus numquam optio distinctio aspernatur quaerat! Vel, tempora quam porro optio modi omnis velit repellat voluptate cumque animi eum sit fuga asperiores similique ipsa, nemo pariatur placeat ea autem maiores sapiente! Dolore commodi totam labore eius magnam harum quis. Ipsum rem, alias nihil numquam, ratione consequatur vitae libero quidem soluta provident harum iure deleniti consequuntur assumenda nam repellendus cum sequi, architecto delectus tempore dolor dolorem! Architecto, deserunt autem!
+                    </p>
+                </div>
+            </div>
+            <form id="message-form-input" action="">
+                <input type="text" name="message-input" id="message-input" required autocomplete="off" maxlength="1000">
+                <input type="submit" value="Send" id="btn-send">
+            </form>
+        </div>   
+        <div class="right-bx">
+
+        </div>                                           
+    </section>
+
+    <footer>
+        <p>Copyright &copy by <a href="#">MRL</a>, All Rights Reserved</p>
+    </footer>
+</body>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script>
+        let btnSetting = document.querySelector('.btn-setting');
+        let settingMenu = document.querySelector('.setting-menu');
+
+        btnSetting.onclick = function() {
+            settingMenu.classList.toggle('show');
+        }
+    </script>
+</html>

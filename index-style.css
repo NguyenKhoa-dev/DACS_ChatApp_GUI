@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --background-color: #0b253c;
+    --white: #fff;
+    --black: #000000;
+    --blue: #1fc1c3;
+    --lightblue: #1e9799;
+    --shadow: rgba(0, 0, 0, 0.2);
+}
+
+body {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    overflow-x: hidden;
+}
+
+/* ============================== HEADER ============================== */
+.btn-header {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--white);
+    bottom: 20px;
+    right: 20px;
+    display: block;
+    border: 1px solid var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: linear 0.2s;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.btn-header ion-icon {
+    font-size: 1.5em;
+    color: var(--background-color);
+}
+
+.btn-header:hover {
+    background-color: var(--blue);
+}
+
+
+.btn-header:hover ion-icon {
+    color: var(--white);
+}
+/* ============================== END BTN-HEADER ============================== */
+header {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    font-weight: 900;
+    color: var(--white);
+    width: 100%;
+    text-align: center;
+    left: 0;
+    top: 0;
+    padding: 20px 0;
+}
+
+header #info {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    right: 2%;
+    top: 5%;
+}
+
+header #info #user {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+header #info #user #img-user {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+header #info #user #img-user img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+header #info #user #user-name {
+    margin-top: 10px;
+    font-weight: 500;
+    color: var(--white);
+    text-align: center;
+}
+
+header #info #user #user-name span {
+    font-weight: 300;
+    display: block;
+    font-style: italic;
+    color: var(--blue);
+}
+/* ============================== INPUT ROOM FORM ============================== */
+.input-room {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.input-room.show {
+    display: flex;
+}
+
+.input-room #form-room-input {
+    position: relative;
+    width: 300px;
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 5px;
+}
+
+.input-room #form-room-input .btn-close-form {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+
+}
+
+.input-room #form-room-input .btn-close-form ion-icon {
+    font-size: 1.2em;
+}
+
+.input-room #form-room-input div {
+    color: var(--blue);
+}
+
+.input-room #form-room-input input {
+    display: block;
+    width: 100%;
+    height: 30px;
+    outline: none;
+}
+
+.input-room #form-room-input input[type=text], input[type=password] {
+    text-indent: 10px;
+    margin: 10px 0;
+}
+
+.input-room #form-room-input input[type=submit] {
+    text-indent: 10px;
+    margin-top: 20px;
+    background-color: var(--blue);
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+/* ============================== SETTING ============================== */
+header #info #setting ion-icon {
+    color: var(--white);
+    font-size: 2em;    
+    margin-left: 15px;
+    cursor: pointer;
+    transition: linear 0.5s;
+}
+
+header #info #setting ion-icon:hover {
+    transform: rotate(-45deg);
+}
+
+header #info .setting-menu {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: var(--white);
+    width: 180px;
+    display: none;
+}
+
+header #info .setting-menu {
+    list-style: none;
+    border: 1px solid var(--black);
+}
+
+header #info .setting-menu.show {
+    display: block;
+}
+
+header #info .setting-menu li {
+    transition: linear 0.2s;
+    user-select: none;
+}
+
+header #info .setting-menu li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: var(--black);
+}
+
+header #info .setting-menu li:hover {
+    background-color: var(--blue);
+}
+
+header #info .setting-menu li:hover a {
+    color: #fff;
+}
+
+/* ============================== CONTETNT ============================== */
+.content {
+    margin: 0 200px;
+}
+
+.content .btn-add-room {
+    width: 50px;
+    height: 50px;
+    background-color: var(--white);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    border: 1px solid var(--black);
+    cursor: pointer;
+    box-shadow: 20px 10px 20px var(--shadow);
+    color: var(--background-color);
+    user-select: none;
+}
+
+.content .btn-add-room:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.content .in-add-room {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.content .in-add-room form{
+    width: 50%;
+}
+
+.content .in-add-room input[type="search"] {
+    height: 35px;
+    width: 70%;
+    outline: none;    
+    border-radius: 5px;
+    text-indent: 2%;
+    background-color: var(--white);
+    border: none;
+}
+
+.content .in-add-room form input[type="search"]:focus {
+    border: 2px solid var(--blue);
+}
+
+
+.content .in-add-room form input[type="submit"] {
+    height: 35px;
+    width: 60px;
+    outline: none;    
+    border-radius: 5px;
+    text-indent: 2%;
+    background-color: var(--white);
+    border: none;
+    cursor: pointer;
+}
+
+.content .in-add-room form input[type="submit"]:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.content .list-room {
+    padding-bottom: 50px;
+}
+
+/* ============================== ROOM ============================== */
+.content .room {
+    width: 100%;
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    box-shadow: 20px 10px 20px var(--shadow);
+    margin-bottom: 25px;
+}
+
+/* ============================== TITLE-ROOM ============================== */
+.content .room .title-room {
+    padding: 10px 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid var(--black);
+}
+
+.content .room .title-room h2 {
+    color: var(--background-color);
+}
+
+.content .room .title-room .btn-join {
+    color: var(--white);
+    background-color: var(--blue);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: ease-in-out 0.2s;
+}
+
+.content .room .title-room .btn-join:hover {
+    background-color: var(--lightblue);
+}
+
+/* ============================== ROOM-INFO ============================== */
+.content .room .room-info {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .room .room-info .date-create {
+    font-style: italic;
+    font-size: 1em;
+}
+
+.content .room .room-info .room-menu a {
+    text-decoration: none;
+    color: var(--background-color);
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.content .room .room-info .room-menu a:hover {
+    text-decoration: underline;
+    font-weight: 700;
+    transition: linear 0.5s;
+}
+
+.content .room .room-info .room-menu a.btnDelete {
+    color: red;
+}
+
+/* -------------------------- FOOTER --------------------------*/
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 20px;
+}
+
+footer P {
+    text-align: center;
+    color: var(--white);
+    font-style: italic;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+footer P a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--blue);
+}
+
+footer P a:hover {
+    text-decoration: underline;
+}
+
+/* -------------------------- MESSAGE-ROOM --------------------------*/
+.room-content {
+    width: 100%;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.room-content .left-bx {
+    width: 60%;
+}
+
+.room-content .left-bx h2 {
+    color: var(--blue);
+    margin-bottom: 10px;
+}
+
+.room-content .left-bx h2 span {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 0.8em;
+}
+
+.room-content .left-bx #message-list {
+    width: 100%;
+    height: 300px;
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 10px 10px;
+    overflow-y: scroll;
+}
+
+.room-content .left-bx #message-list .message-display {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.room-content .left-bx #message-list .message-display h3 {
+    color: var(--background-color);
+    margin-bottom: 5px;
+}
+
+.room-content .left-bx #message-list .message-display h3 span {
+    color: var(--black);
+    font-size: 0.5em;
+}
+
+.room-content .left-bx #message-list .message-display .message-content {
+    color: var(--black);
+    text-indent: 5px;
+}
+
+.room-content .left-bx #message-form-input {
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.room-content .left-bx #message-form-input #message-input {   
+    width: 90%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 0 10px;
+    margin-right: 10px;
+}
+
+.room-content .left-bx #message-form-input #message-input:focus {   
+    border: 2px solid var(--blue);
+}
+
+.room-content .left-bx #message-form-input #btn-send {   
+    width: calc(100% - 90% - 10px);
+    text-align: center;
+    font-weight: 700;
+    color: var(--background-color);
+    background-color: var(--white);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+.room-content .left-bx #message-form-input #btn-send:hover {   
+    background-color: var(--blue);
+    color: var(--white);
+}

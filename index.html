@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index-style.css">
+    <title>Chat Application</title>
+</head>
+<body>
+    <div class="input-room">
+        <form id="form-room-input">
+            <div class="btn-close-form"><ion-icon name="close-circle"></ion-icon></div>
+            <div>Room Name</div>
+            <input type="text" name="room-name" id="room-name" autocomplete="off" required maxlength="50">
+            <div>Password</div>
+            <input type="password" name="room-pwd" id="room-pwd">            
+            <input type="submit" value="Create New Room">
+        </form>
+    </div>
+    <a class="btn-header" href="#header"><ion-icon name="arrow-round-up"></ion-icon></a>
+    <header id="header">   
+        <h1>Chat application</h1>     
+        <div id="info">
+            <div id="user">
+                <div id="img-user"><img src="imgs/Logo_Group_MRL_01.png" alt="img-user"></div>
+                <div id="user-name">Welcome,<span>Admin</span></div>                
+            </div>
+            <div id="setting"><ion-icon class="btn-setting" name="settings"></ion-icon></div>
+            <ul class="setting-menu">
+                <li><a href="">Change Password</a></li>
+                <li><a href="">Profile</a></li>
+                <li><a href="">Friends</a></li>
+                <li><a href="">My Rooms</a></li>
+                <li><a href="">Delete Account</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="content">
+        <div class="in-add-room">
+            <div class="btn-add-room">+</div>
+            <form>
+                <input type="search" name="room-name" id="room-name" autocomplete="off" placeholder="Search Room Name" required>            
+                <input type="submit" name="search-room" id="search-room" value="Search">
+            </form>           
+        </div>        
+        
+        <div class="list-room">
+            <div class="room">
+                <div class="title-room">
+                    <h2>Room Name</h2>
+                    <a href="#" class="btn-join">Join Now</a>
+                </div>                
+                <div class="room-info">
+                    <p class="date-create">Created 11/11/2021 By Long</p>
+                    <div class="room-menu">
+                        <a href="#">Update</a>
+                        <a class="btnDelete" href="#">Delete</a>
+                    </div>
+                </div>
+            </div>
+            <div class="room">
+                <div class="title-room">
+                    <h2>Room Name</h2>
+                    <a href="#" class="btn-join">Join Now</a>
+                </div>                
+                <div class="room-info">
+                    <p class="date-create">Created 11/11/2021 By Long</p>
+                    <div class="room-menu">
+                        <a href="#">Update</a>
+                        <a class="btnDelete" href="#">Delete</a>
+                    </div>
+                </div>
+            </div>
+            <div class="room">
+                <div class="title-room">
+                    <h2>Room Name</h2>
+                    <a href="#" class="btn-join">Join Now</a>
+                </div>                
+                <div class="room-info">
+                    <p class="date-create">Created 11/11/2021 By Long</p>
+                    <div class="room-menu">
+                        <a href="#">Update</a>
+                        <a class="btnDelete" href="#">Delete</a>
+                    </div>
+                </div>
+            </div>
+            <div class="room">
+                <div class="title-room">
+                    <h2>Room Name</h2>
+                    <a href="#" class="btn-join">Join Now</a>
+                </div>                
+                <div class="room-info">
+                    <p class="date-create">Created 11/11/2021 By Long</p>
+                    <div class="room-menu">
+                        <a href="#">Update</a>
+                        <a class="btnDelete" href="#">Delete</a>
+                    </div>
+                </div>
+            </div>
+            <div class="room">
+                <div class="title-room">
+                    <h2>Room Name</h2>
+                    <a href="#" class="btn-join">Join Now</a>
+                </div>                
+                <div class="room-info">
+                    <p class="date-create">Created 11/11/2021 By Long</p>
+                    <div class="room-menu">
+                        <a href="#">Update</a>
+                        <a class="btnDelete" href="#">Delete</a>
+                    </div>
+                </div>
+            </div>
+            <div class="room">
+                <div class="title-room">
+                    <h2>Room Name</h2>
+                    <a href="#" class="btn-join">Join Now</a>
+                </div>                
+                <div class="room-info">
+                    <p class="date-create">Created 11/11/2021 By Long</p>
+                    <div class="room-menu">
+                        <a href="#">Update</a>
+                        <a class="btnDelete" href="#">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </section>
+    <footer>
+        <p>Copyright &copy by <a href="#">MRL</a>, All Rights Reserved</p>
+    </footer>
+</body>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script>
+        let btnSetting = document.querySelector('.btn-setting');
+        let settingMenu = document.querySelector('.setting-menu');
+
+        let btnAddRoom = document.querySelector('.btn-add-room');
+        let divInputRoom = document.querySelector('.input-room');
+        let btnCloseForm = document.querySelector('.btn-close-form');        
+
+        btnAddRoom.onclick = function() {
+            divInputRoom.classList.add('show');
+        }
+
+        btnCloseForm.onclick = function() {
+            divInputRoom.classList.remove('show');
+        }
+
+        btnSetting.onclick = function() {
+            settingMenu.classList.toggle('show');
+        }
+    </script>
+</html>
