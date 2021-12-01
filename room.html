@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index-style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="reponsive.css">
+    <title>Chat Application</title>
 </head>
 <body>
     <header id="header">   
@@ -72,13 +73,19 @@
                     </p>
                 </div>
             </div>
-            <form id="message-form-input" action="">
+            <form id="message-form-input" onsubmit="return false">
                 <input type="text" name="message-input" id="message-input" required autocomplete="off" maxlength="1000">
                 <input type="submit" value="Send" id="btn-send">
             </form>
         </div>   
         <div class="right-bx">
-
+            <h2>List User In Room</h2>
+            <div class="list-user">
+                <div class="user-box">
+                    <div class="avatar"></div>
+                    <div class="username"></div>                    
+                </div>
+            </div>
         </div>                                           
     </section>
 

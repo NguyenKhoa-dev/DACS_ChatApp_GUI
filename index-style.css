@@ -25,6 +25,25 @@ body {
     overflow-x: hidden;
 }
 
+/* ============================== SCROLL BAR ============================== */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--white);
+    border-radius: 5px;
+  }
+
+::-webkit-scrollbar-thumb {
+    background: var(--blue);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--lightblue);
+}
+
 /* ============================== HEADER ============================== */
 .btn-header {
     position: fixed;
@@ -149,14 +168,14 @@ header #info #user #user-name span {
 
 .input-room #form-room-input .btn-close-form {
     position: absolute;
-    right: 20px;
-    top: 15px;
+    right: 10px;
+    top: 10px;
     cursor: pointer;
-
 }
 
 .input-room #form-room-input .btn-close-form ion-icon {
     font-size: 1.2em;
+    color: red;
 }
 
 .input-room #form-room-input div {
@@ -182,7 +201,13 @@ header #info #user #user-name span {
     border: none;
     cursor: pointer;
     color: #fff;
+    transition: linear 0.5s;
 }
+
+.input-room #form-room-input input[type=submit]:hover {
+    background-color: var(--lightblue);
+}
+
 /* ============================== SETTING ============================== */
 header #info #setting ion-icon {
     color: var(--white);
@@ -296,14 +321,14 @@ header #info .setting-menu li:hover a {
     outline: none;    
     border-radius: 5px;
     text-indent: 2%;
-    background-color: var(--white);
+    background-color: var(--blue);
+    color: var(--white);
     border: none;
     cursor: pointer;
 }
 
 .content .in-add-room form input[type="submit"]:hover {
-    background-color: var(--blue);
-    color: var(--white);
+    background-color: var(--lightblue);
 }
 
 .content .list-room {
@@ -315,7 +340,7 @@ header #info .setting-menu li:hover a {
     width: 100%;
     background-color: var(--white);
     border: 1px solid var(--black);
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 20px 10px 20px var(--shadow);
     margin-bottom: 25px;
 }
@@ -411,11 +436,11 @@ footer P a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 20px;
 }
 
+/* -------------------------- MESSAGE-ROOM-LEFT-SIDE --------------------------*/
 .room-content .left-bx {
-    width: 60%;
+    width: 65%;
 }
 
 .room-content .left-bx h2 {
@@ -431,11 +456,12 @@ footer P a:hover {
 
 .room-content .left-bx #message-list {
     width: 100%;
-    height: 300px;
+    height: 310px;
     background-color: var(--white);
     border-radius: 5px;
     padding: 10px 10px;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .room-content .left-bx #message-list .message-display {
@@ -451,6 +477,7 @@ footer P a:hover {
 .room-content .left-bx #message-list .message-display h3 span {
     color: var(--black);
     font-size: 0.5em;
+    margin-left: 5px;
 }
 
 .room-content .left-bx #message-list .message-display .message-content {
@@ -467,7 +494,7 @@ footer P a:hover {
 
 .room-content .left-bx #message-form-input #message-input {   
     width: 90%;
-    height: 30px;
+    height: 40px;
     display: flex;
     justify-content: space-between;
     border-radius: 5px;
@@ -475,6 +502,7 @@ footer P a:hover {
     border: none;
     padding: 0 10px;
     margin-right: 10px;
+    font-size: 0.9em;
 }
 
 .room-content .left-bx #message-form-input #message-input:focus {   
@@ -482,7 +510,8 @@ footer P a:hover {
 }
 
 .room-content .left-bx #message-form-input #btn-send {   
-    width: calc(100% - 90% - 10px);
+    padding: 0 22px;
+    margin-left: 10px;
     text-align: center;
     font-weight: 700;
     color: var(--background-color);
@@ -490,10 +519,28 @@ footer P a:hover {
     outline: none;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
     transition: ease-in-out 0.2s;
 }
 
 .room-content .left-bx #message-form-input #btn-send:hover {   
     background-color: var(--blue);
     color: var(--white);
+}
+
+/* -------------------------- MESSAGE-ROOM-RIGHT-SIDE --------------------------*/
+.room-content .right-bx {   
+    width: 30%;
+}
+
+.room-content .right-bx h2 {   
+    color: var(--blue);
+    margin-bottom: 10px;
+}
+
+.room-content .right-bx .list-user {  
+    width: 100%;
+    height: 355px;
+    border-radius: 5px; 
+    background-color: var(--white);
 }
