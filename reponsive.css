@@ -152,6 +152,10 @@
         margin: 0;
         width: 30%;
     }
+
+    .list-room .room .title-room .input-room-pwd input[type=password] {
+        width: 150px;
+    }
 }
 
 @media (max-width: 280px) { 
@@ -179,5 +183,14 @@
 
     .room-content .left-bx #message-list .message-display h3 span {
         margin-left: 0;
+    }
+
+    .list-room .room .title-room .input-room-pwd input[type=password] {
+        width: 120px;
+        height: 20px;
+    }
+
+    .list-room .room .title-room .input-room-pwd input[type=submit] {
+        height: 20px;
     }
 }

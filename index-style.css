@@ -367,12 +367,64 @@ header #info .setting-menu li:hover a {
     padding: 5px 10px;
     border-radius: 5px;
     transition: ease-in-out 0.2s;
+    user-select: none;
+    cursor: pointer;
+}
+
+.content .room .title-room .btn-join.hidden {
+    display: none;
 }
 
 .content .room .title-room .btn-join:hover {
     background-color: var(--lightblue);
 }
 
+/* ============================== ROOM-PASSWORD-INPUT ============================== */
+.list-room .room .title-room .input-room-pwd {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+}
+
+.list-room .room .title-room .input-room-pwd.show {
+    display: flex;
+}
+
+.list-room .room .title-room .input-room-pwd input {
+    outline: none;
+}
+
+.list-room .room .title-room .input-room-pwd input[type=password] {
+    width: 180px;
+    height: 30px;
+}
+
+.list-room .room .title-room .input-room-pwd input[type=submit] {
+    height: 30px;
+    padding: 0 10px;
+    cursor: pointer;
+    border: none;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 5px;
+    font-weight: 500;
+    transition: linear 0.2s;
+}
+
+.list-room .room .title-room .input-room-pwd input[type=submit]:hover {
+    background-color: var(--lightblue);
+}
+
+.list-room .room .title-room .input-room-pwd .btn-close-room-pwd {
+    cursor: pointer;
+    color: red;
+    margin-left: 5px;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* ============================== ROOM-INFO ============================== */
 .content .room .room-info {
     padding: 20px 25px;

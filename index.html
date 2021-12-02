@@ -50,7 +50,34 @@
             <div class="room">
                 <div class="title-room">
                     <h2>Room Name</h2>
-                    <a href="#" class="btn-join">Join Now</a>
+                    <div class="btn-join btn-input-pwd-room">Join Now</div>
+                    <div class="input-room-pwd">
+                        <form action="">
+                            <input type="password" name="room-pwd" id="room-pwd" placeholder="Input Password Here" required>
+                            <input type="submit" value="Join">                            
+                        </form>         
+                        <div class="btn-close-room-pwd"><ion-icon name="close"></ion-icon></div>                
+                    </div>
+                </div>                
+                <div class="room-info">
+                    <p class="date-create">Created 11/11/2021 By Long</p>
+                    <div class="room-menu">
+                        <a href="#">Update</a>
+                        <a class="btnDelete" href="#">Delete</a>
+                    </div>
+                </div>
+            </div>
+            <div class="room">
+                <div class="title-room">
+                    <h2>Room Name</h2>
+                    <div class="btn-join btn-input-pwd-room">Join Now</div>
+                    <div class="input-room-pwd">
+                        <form action="">
+                            <input type="password" name="room-pwd" id="room-pwd" placeholder="Input Password Here" required>
+                            <input type="submit" value="Join">                            
+                        </form>         
+                        <div class="btn-close-room-pwd"><ion-icon name="close"></ion-icon></div>                
+                    </div>
                 </div>                
                 <div class="room-info">
                     <p class="date-create">Created 11/11/2021 By Long</p>
@@ -138,7 +165,25 @@
 
         let btnAddRoom = document.querySelector('.btn-add-room');
         let divInputRoom = document.querySelector('.input-room');
-        let btnCloseForm = document.querySelector('.btn-close-form');        
+        let btnCloseForm = document.querySelector('.btn-close-form');   
+        
+        let btnInputPwdRoom = document.querySelectorAll('.btn-input-pwd-room');
+        let divInputRoomPwd = document.querySelectorAll('.input-room-pwd');
+        let btnCloseRoomPwd = document.querySelectorAll('.btn-close-room-pwd');
+
+        for (var i = 0; i < btnInputPwdRoom.length; i++) {
+            btnInputPwdRoom[i].addEventListener('click', function(i) {
+                btnInputPwdRoom[i].classList.add('hidden');
+                divInputRoomPwd[i].classList.add('show');
+            }.bind(this, i));
+        }
+
+        for (var i = 0; i < btnCloseRoomPwd.length; i++) {
+            btnCloseRoomPwd[i].addEventListener('click', function(i) {
+                btnInputPwdRoom[i].classList.remove('hidden');
+                divInputRoomPwd[i].classList.remove('show');
+            }.bind(this, i));
+        }
 
         btnAddRoom.onclick = function() {
             divInputRoom.classList.add('show');
@@ -151,5 +196,7 @@
         btnSetting.onclick = function() {
             settingMenu.classList.toggle('show');
         }
+
+
     </script>
 </html>
