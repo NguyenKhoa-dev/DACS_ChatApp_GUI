@@ -9,12 +9,48 @@
 }
 
 :root {
-    --background-color: #0b253c;
-    --white: #fff;
-    --black: #000000;
+    --background-color: #333;
+    --white: #f1f1f1;
+    --white1: #f1f1f1;
+    --white2: #f1f1f1;
+    --black: #333;
+    --black1: #000;
+    --black2: #000;
+    --border-color: #000;
+    --light-black: #707070;    
+    --light-black1: #707070;  
     --blue: #1fc1c3;
+    --blue1: #1fc1c3;
+    --blue2: #1fc1c3;
     --lightblue: #1e9799;
     --shadow: rgba(0, 0, 0, 0.2);
+    --red: #1fc1c3;
+
+    /* --black: #fff; */
+    /* --background-color: #f1f1f1; */
+    /* --white: #333; */
+}
+
+.light {
+    --background-color: #f1f1f1;
+    --light-black: #fff;
+    --light-black1: #fff;    
+    --white1: #333;
+    --white2: #df1829;
+    --black: #f1f1f1;
+    --black1: #333;
+    --black2: #fff;
+    --border-color: #333;
+    --blue1: #333;
+    --blue2: #333;
+    /* --lightblue: #1e9799;
+    --shadow: rgba(0, 0, 0, 0.2);
+    --red: #fff; */
+}
+
+::placeholder { 
+    color: var(--white1);
+    opacity: 0.8;
 }
 
 body {
@@ -23,6 +59,7 @@ body {
     min-height: 100vh;
     background-color: var(--background-color);
     overflow-x: hidden;
+    transition: linear 0.2s;
 }
 
 /* ============================== SCROLL BAR ============================== */
@@ -36,12 +73,12 @@ body {
   }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--blue);
+    background: var(--blue1);
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--lightblue);
+    background: var(--blue);
 }
 
 /* ============================== HEADER ============================== */
@@ -50,11 +87,12 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: var(--white);
+    background-color: var(--light-black);
     bottom: 20px;
     right: 20px;
     display: block;
-    border: 1px solid var(--black);
+    border: 1px solid var(--border-color);
+    box-shadow: 5px 5px 20px var(--shadow);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,11 +103,11 @@ body {
 
 .btn-header ion-icon {
     font-size: 1.5em;
-    color: var(--background-color);
+    color: var(--white1);
 }
 
 .btn-header:hover {
-    background-color: var(--blue);
+    background-color: var(--blue1);
 }
 
 
@@ -90,7 +128,7 @@ header h1 {
     text-transform: uppercase;
     font-size: 2.5em;
     font-weight: 900;
-    color: var(--white);
+    color: var(--white1);
     width: 100%;
     text-align: center;
     left: 0;
@@ -130,7 +168,7 @@ header #info #user #img-user img {
 header #info #user #user-name {
     margin-top: 10px;
     font-weight: 500;
-    color: var(--white);
+    color: var(--white1);
     text-align: center;
 }
 
@@ -138,7 +176,7 @@ header #info #user #user-name span {
     font-weight: 300;
     display: block;
     font-style: italic;
-    color: var(--blue);
+    color: var(--blue1);
 }
 /* ============================== INPUT ROOM FORM ============================== */
 .input-room {
@@ -161,7 +199,8 @@ header #info #user #user-name span {
 .input-room #form-room-input {
     position: relative;
     width: 300px;
-    background-color: #fff;
+    background-color: var(--black);
+    border: 1px solid var(--border-color);
     padding: 20px 30px;
     border-radius: 5px;
 }
@@ -175,11 +214,11 @@ header #info #user #user-name span {
 
 .input-room #form-room-input .btn-close-form ion-icon {
     font-size: 1.2em;
-    color: red;
+    color: var(--white1);
 }
 
 .input-room #form-room-input div {
-    color: var(--blue);
+    color: var(--white1);
 }
 
 .input-room #form-room-input input {
@@ -187,6 +226,7 @@ header #info #user #user-name span {
     width: 100%;
     height: 30px;
     outline: none;
+    color: var(--black1);
 }
 
 .input-room #form-room-input input[type=text], input[type=password] {
@@ -197,20 +237,21 @@ header #info #user #user-name span {
 .input-room #form-room-input input[type=submit] {
     text-indent: 10px;
     margin-top: 20px;
-    background-color: var(--blue);
+    background-color: var(--blue2);
     border: none;
     cursor: pointer;
-    color: #fff;
-    transition: linear 0.5s;
+    color: var(--white);
+    transition: linear 0.2s;
 }
 
 .input-room #form-room-input input[type=submit]:hover {
-    background-color: var(--lightblue);
+    background-color: var(--blue2);
+    color: var(--black2);
 }
 
 /* ============================== SETTING ============================== */
 header #info #setting ion-icon {
-    color: var(--white);
+    color: var(--white1);
     font-size: 2em;    
     margin-left: 15px;
     cursor: pointer;
@@ -225,23 +266,42 @@ header #info .setting-menu {
     position: absolute;
     right: 0;
     top: 50px;
-    background-color: var(--white);
+    background-color: var(--light-black);
     width: 180px;
     display: none;
 }
 
 header #info .setting-menu {
     list-style: none;
-    border: 1px solid var(--black);
+    border: 1px solid var(--border-color);
 }
 
 header #info .setting-menu.show {
     display: block;
 }
 
+header #info .setting-menu #btn-view-mode {
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white1);
+}
+
+header #info .setting-menu #btn-view-mode:hover {
+    color: var(--black2);
+}
+
+header #info .setting-menu #btn-view-mode ion-icon {
+    margin-right: 10px;
+}
+
 header #info .setting-menu li {
     transition: linear 0.2s;
     user-select: none;
+    width: 100%;
+    cursor: pointer;    
 }
 
 header #info .setting-menu li a {
@@ -250,15 +310,15 @@ header #info .setting-menu li a {
     height: 100%;
     padding: 10px 10px;
     text-decoration: none;
-    color: var(--black);
+    color: var(--white1);
 }
 
 header #info .setting-menu li:hover {
-    background-color: var(--blue);
+    background-color: var(--blue1);
 }
 
 header #info .setting-menu li:hover a {
-    color: #fff;
+    color: var(--black2);
 }
 
 /* ============================== CONTETNT ============================== */
@@ -269,22 +329,22 @@ header #info .setting-menu li:hover a {
 .content .btn-add-room {
     width: 50px;
     height: 50px;
-    background-color: var(--white);
+    background-color: var(--light-black);
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2.5em;
-    border: 1px solid var(--black);
+    border: 1px solid var(--border-color);
     cursor: pointer;
-    box-shadow: 20px 10px 20px var(--shadow);
-    color: var(--background-color);
+    box-shadow: 10px 10px 20px var(--shadow);
+    color: var(--white1);
     user-select: none;
 }
 
 .content .btn-add-room:hover {
-    background-color: var(--blue);
-    color: var(--white);
+    background-color: var(--blue1);
+    color: var(--black2);
 }
 
 .content .in-add-room {
@@ -306,12 +366,14 @@ header #info .setting-menu li:hover a {
     outline: none;    
     border-radius: 5px;
     text-indent: 2%;
-    background-color: var(--white);
+    background-color: var(--light-black);
     border: none;
+    color: var(--white1);
+    border: 1px solid var(--border-color);
 }
 
 .content .in-add-room form input[type="search"]:focus {
-    border: 2px solid var(--blue);
+    border: 2px solid var(--blue1);
 }
 
 
@@ -321,14 +383,16 @@ header #info .setting-menu li:hover a {
     outline: none;    
     border-radius: 5px;
     text-indent: 2%;
-    background-color: var(--blue);
-    color: var(--white);
+    background-color: var(--light-black);
+    color: var(--white1);
     border: none;
     cursor: pointer;
+    border: 1px solid var(--border-color);
 }
 
 .content .in-add-room form input[type="submit"]:hover {
-    background-color: var(--lightblue);
+    background-color: var(--blue1);
+    color: var(--black2);
 }
 
 .content .list-room {
@@ -338,10 +402,10 @@ header #info .setting-menu li:hover a {
 /* ============================== ROOM ============================== */
 .content .room {
     width: 100%;
-    background-color: var(--white);
-    border: 1px solid var(--black);
+    background-color: var(--light-black);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
-    box-shadow: 20px 10px 20px var(--shadow);
+    box-shadow: 10px 10px 20px var(--shadow);
     margin-bottom: 25px;
 }
 
@@ -352,16 +416,21 @@ header #info .setting-menu li:hover a {
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    border-bottom: 1px solid var(--black);
+    border-bottom: 1px solid var(--border-color);
+    min-height: 50px;
 }
 
-.content .room .title-room h2 {
-    color: var(--background-color);
+.content .room .title-room .title {
+    color: var(--white1);
+}
+
+.content .room .title-room .title.hidden {
+    display: none;
 }
 
 .content .room .title-room .btn-join {
-    color: var(--white);
-    background-color: var(--blue);
+    color: var(--white1);
+    background-color: var(--black);
     text-decoration: none;
     font-weight: 500;
     padding: 5px 10px;
@@ -376,13 +445,14 @@ header #info .setting-menu li:hover a {
 }
 
 .content .room .title-room .btn-join:hover {
-    background-color: var(--lightblue);
+    background-color: var(--blue1);
+    color: var(--black2);
 }
 
 /* ============================== ROOM-PASSWORD-INPUT ============================== */
 .list-room .room .title-room .input-room-pwd {
     position: absolute;
-    z-index: 1000;
+    z-index: 9;
     display: none;
     align-items: center;
 }
@@ -393,19 +463,20 @@ header #info .setting-menu li:hover a {
 
 .list-room .room .title-room .input-room-pwd input {
     outline: none;
+    border: none;
 }
 
 .list-room .room .title-room .input-room-pwd input[type=password] {
     width: 180px;
     height: 30px;
+    background-color: var(--white);
 }
 
 .list-room .room .title-room .input-room-pwd input[type=submit] {
     height: 30px;
     padding: 0 10px;
     cursor: pointer;
-    border: none;
-    background-color: var(--blue);
+    background-color: var(--black1);
     color: var(--white);
     border-radius: 5px;
     font-weight: 500;
@@ -413,18 +484,20 @@ header #info .setting-menu li:hover a {
 }
 
 .list-room .room .title-room .input-room-pwd input[type=submit]:hover {
-    background-color: var(--lightblue);
+    background-color: var(--blue1);
+    color: var(--black2);
 }
 
 .list-room .room .title-room .input-room-pwd .btn-close-room-pwd {
     cursor: pointer;
-    color: red;
+    color: var(--white1);
     margin-left: 5px;
     font-size: 1.2em;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 /* ============================== ROOM-INFO ============================== */
 .content .room .room-info {
     padding: 20px 25px;
@@ -435,11 +508,12 @@ header #info .setting-menu li:hover a {
 .content .room .room-info .date-create {
     font-style: italic;
     font-size: 1em;
+    color: var(--black1);
 }
 
 .content .room .room-info .room-menu a {
     text-decoration: none;
-    color: var(--background-color);
+    color: var(--black1);
     font-weight: 500;
     margin-left: 10px;
 }
@@ -451,7 +525,7 @@ header #info .setting-menu li:hover a {
 }
 
 .content .room .room-info .room-menu a.btnDelete {
-    color: red;
+    color: var(--white2);
 }
 
 /* -------------------------- FOOTER --------------------------*/
@@ -465,7 +539,7 @@ footer {
 
 footer P {
     text-align: center;
-    color: var(--white);
+    color: var(--white1);
     font-style: italic;
     font-size: 1.2em;
     font-weight: 300;
@@ -492,16 +566,16 @@ footer P a:hover {
 
 /* -------------------------- MESSAGE-ROOM-LEFT-SIDE --------------------------*/
 .room-content .left-bx {
-    width: 65%;
+    width: 70%;    
 }
 
 .room-content .left-bx h2 {
-    color: var(--blue);
+    color: var(--blue1);
     margin-bottom: 10px;
 }
 
 .room-content .left-bx h2 span {
-    color: var(--white);
+    color: var(--white1);
     font-weight: 400;
     font-size: 0.8em;
 }
@@ -509,11 +583,13 @@ footer P a:hover {
 .room-content .left-bx #message-list {
     width: 100%;
     height: 310px;
-    background-color: var(--white);
+    background-color: var(--light-black);
     border-radius: 5px;
     padding: 10px 10px;
     overflow-y: scroll;
     overflow-x: hidden;
+    box-shadow: 10px -5px 30px var(--shadow);
+    border: 1px solid var(--border-color);
 }
 
 .room-content .left-bx #message-list .message-display {
@@ -522,18 +598,18 @@ footer P a:hover {
 }
 
 .room-content .left-bx #message-list .message-display h3 {
-    color: var(--background-color);
+    color: var(--white1);
     margin-bottom: 5px;
 }
 
 .room-content .left-bx #message-list .message-display h3 span {
-    color: var(--black);
+    color: var(--black1);
     font-size: 0.5em;
     margin-left: 5px;
 }
 
 .room-content .left-bx #message-list .message-display .message-content {
-    color: var(--black);
+    color: var(--black1);
     text-indent: 5px;
 }
 
@@ -555,10 +631,13 @@ footer P a:hover {
     padding: 0 10px;
     margin-right: 10px;
     font-size: 0.9em;
+    background-color: var(--light-black);
+    border: 1px solid var(--border-color);
+    color: var(--white1);
 }
 
 .room-content .left-bx #message-form-input #message-input:focus {   
-    border: 2px solid var(--blue);
+    border: 2px solid var(--blue1);
 }
 
 .room-content .left-bx #message-form-input #btn-send {   
@@ -566,27 +645,33 @@ footer P a:hover {
     margin-left: 10px;
     text-align: center;
     font-weight: 700;
-    color: var(--background-color);
-    background-color: var(--white);
+    color: var(--white1);
+    background-color: var(--light-black);
     outline: none;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     transition: ease-in-out 0.2s;
+    border: 1px solid var(--border-color);
 }
 
 .room-content .left-bx #message-form-input #btn-send:hover {   
-    background-color: var(--blue);
-    color: var(--white);
+    background-color: var(--blue1);
+    color: var(--black2);
+}
+
+#emoji-picker {
+    background-color: var(--black) !important; 
+    border: 1px solid var(--border-color) !important;
 }
 
 /* -------------------------- MESSAGE-ROOM-RIGHT-SIDE --------------------------*/
 .room-content .right-bx {   
-    width: 30%;
+    width: 25%;
 }
 
 .room-content .right-bx h2 {   
-    color: var(--blue);
+    color: var(--blue1);
     margin-bottom: 10px;
 }
 
@@ -594,5 +679,41 @@ footer P a:hover {
     width: 100%;
     height: 355px;
     border-radius: 5px; 
-    background-color: var(--white);
+    background-color: var(--light-black);
+    border: 1px solid var(--border-color);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-shadow: 10px 10px 20px var(--shadow);
+}
+
+.room-content .right-bx .list-user .user-box {  
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.room-content .right-bx .list-user .user-box .avatar  {  
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.room-content .right-bx .list-user .user-box .avatar img  {  
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.room-content .right-bx .list-user .user-box .username {  
+    margin-left: 20px;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--white1);
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

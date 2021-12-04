@@ -19,21 +19,6 @@
     .room-content h2 {
         font-size: 1.2em;
     }
-}
-
-@media (max-width: 620px) {
-    .content {
-        margin: 0 20px;
-    }
-
-    header h1 {
-        text-align: left;
-        padding: 20px 40px;
-    }
-
-    .btn-header {
-        display: none;
-    }
 
     .room-content {
         flex-direction: column;
@@ -49,6 +34,21 @@
         width: 100%;
         margin-bottom: 20px;
     }
+}
+
+@media (max-width: 620px) {
+    .content {
+        margin: 0 20px;
+    }
+
+    header h1 {
+        text-align: left;
+        padding: 20px 40px;
+    }
+
+    .btn-header {
+        display: none;
+    }    
 }
 
 @media (max-width: 480px) {

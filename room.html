@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index-style.css">
     <link rel="stylesheet" href="reponsive.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Chat Application</title>
 </head>
 <body>
@@ -18,6 +19,7 @@
             </div>
             <div id="setting"><ion-icon class="btn-setting" name="settings"></ion-icon></div>
             <ul class="setting-menu">
+                <li><div id="btn-view-mode" onclick="changeMode()"><ion-icon name="sunny"></ion-icon>Light Mode</div></li>
                 <li><a href="">Change Password</a></li>
                 <li><a href="">Profile</a></li>
                 <li><a href="">Friends</a></li>
@@ -82,9 +84,25 @@
             <h2>List User In Room</h2>
             <div class="list-user">
                 <div class="user-box">
-                    <div class="avatar"></div>
-                    <div class="username"></div>                    
+                    <div class="avatar"><img src="imgs/Logo_Group_MRL_01.png" alt="logo"></div>
+                    <div class="username">MinoIT</div>                    
                 </div>
+                <div class="user-box">
+                    <div class="avatar"><img src="imgs/Logo_Group_MRL_01.png" alt="logo"></div>
+                    <div class="username">MinoIT</div>                    
+                </div>
+                <div class="user-box">
+                    <div class="avatar"><img src="imgs/Logo_Group_MRL_01.png" alt="logo"></div>
+                    <div class="username">MinoIT</div>                    
+                </div>
+                <div class="user-box">
+                    <div class="avatar"><img src="imgs/Logo_Group_MRL_01.png" alt="logo"></div>
+                    <div class="username">MinoIT</div>                    
+                </div>  
+                <div class="user-box">
+                    <div class="avatar"><img src="imgs/Logo_Group_MRL_01.png" alt="logo"></div>
+                    <div class="username">MinoIT</div>                    
+                </div>                
             </div>
         </div>                                           
     </section>
@@ -94,6 +112,7 @@
     </footer>
 </body>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="main-script.js"></script>
     <script>
         let btnSetting = document.querySelector('.btn-setting');
         let settingMenu = document.querySelector('.setting-menu');
