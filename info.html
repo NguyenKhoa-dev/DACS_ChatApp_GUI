@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="index-style.css">
+    <link rel="stylesheet" href="reponsive.css">
+    <title>Information</title>
+</head>
+<body>
+    <header id="header">   
+        <h1>Chat application</h1>     
+        <div id="info">
+            <div id="user">
+                <div id="img-user"><img src="imgs/Logo_Group_MRL_01.png" alt="img-user"></div>
+                <div id="user-name">Welcome,<span>Admin</span></div>                
+            </div>
+            <div id="setting"><ion-icon class="btn-setting" name="settings"></ion-icon></div>
+            <ul class="setting-menu">
+                <li><div id="btn-view-mode" onclick="changeMode()"><ion-icon name="sunny"></ion-icon>Light Mode</div></li>
+                <li><a href="">Change Password</a></li>
+                <li><a href="">Profile</a></li>
+                <li><a href="">Friends</a></li>
+                <li><a href="">My Rooms</a></li>
+                <li><a href="">Delete Account</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="content-info">
+        <h1>Information</h1>
+        <div class="info-bx">
+            <div class="img-user">
+                <label for="file-upload">
+                    <ion-icon name="camera"></ion-icon>
+                    <input type="file" id="file-upload">
+                </label>
+                <img src="./imgs/Logo_Group_MRL_01.png" alt="img">    
+            </div> 
+            <div class="config-info">
+                <label for="datepicker">Day of birth: <input type="text" id="datepicker" autocomplete="off"></label>  
+                <div class="btn">
+                    <a href="">Confirm</a>
+                    <a href="">Cancel</a>
+                    <a class="btn-delete-acc" href="">Delete Account</a>
+                </div>          
+            </div>              
+        </div>         
+    </div>
+</body>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script src="./main-script.js"></script>
+</html>

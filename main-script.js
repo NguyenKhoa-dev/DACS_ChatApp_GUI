@@ -27,3 +27,10 @@ function changeMode() {
         settingMenu.classList.remove('show'); 
     }            
 }
+
+let btnSetting = document.querySelector('.btn-setting');
+let settingMenu = document.querySelector('.setting-menu');
+
+btnSetting.onclick = function() {
+    settingMenu.classList.toggle('show');
+} 

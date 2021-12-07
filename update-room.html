@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index-style.css">
+    <link rel="stylesheet" href="reponsive.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Chat Application</title>
+</head>
+<body>
+    <div class="input-room">
+        <form id="form-room-input">
+            <div class="btn-close-form"><ion-icon name="close-circle"></ion-icon></div>
+            <div>Room Name</div>
+            <input type="text" name="room-name" id="room-name" autocomplete="off" required maxlength="50">
+            <div>Password</div>
+            <input type="password" name="room-pwd" id="room-pwd">            
+            <input type="submit" value="Create New Room">
+        </form>
+    </div>
+    <a class="btn-header" href="#header"><ion-icon name="arrow-round-up"></ion-icon></a>
+    <header id="header">   
+        <h1>Chat application</h1>     
+        <div id="info">
+            <div id="user">
+                <div id="img-user"><img src="imgs/Logo_Group_MRL_01.png" alt="img-user"></div>
+                <div id="user-name">Welcome,<span>Admin</span></div>                
+            </div>
+            <div id="setting"><ion-icon class="btn-setting" name="settings"></ion-icon></div>
+            <ul class="setting-menu">
+                <li><div id="btn-view-mode" onclick="changeMode()"><ion-icon name="sunny"></ion-icon>Light Mode</div></li>
+                <li><a href="">Change Password</a></li>
+                <li><a href="">Profile</a></li>
+                <li><a href="">Friends</a></li>
+                <li><a href="">My Rooms</a></li>
+                <li><a href="">Delete Account</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="update-room-content">
+        <h1>Update Room: <span>Room Name</span></h1>
+        <form class="update-room-form" action="">
+            <label for="chk-update-room-pwd" onclick="checkChkBox()"><input type="checkbox" id="chk-update-room-pwd">Want to change room's password!</label>
+            <div class="label">Room Name: <input type="text" autocomplete="off" id="room-name-update" required></div>             
+            <div class="label">Password: <input type="password" id="room-pwd-update" required></div>                 
+            <div id="change-room-pwd">
+                <div>New Password: <input type="password" id="room-new-pwd-update"></div>                
+                <div>Confirm Password: <input type="password" id="room-confirm-pwd-update"></div>                
+            </div>           
+            <input type="submit" value="Confirm">
+        </form>
+    </section>
+    <footer>
+        <p>Copyright &copy by <a href="#">MRL</a>, All Rights Reserved</p>
+    </footer>
+</body>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="main-script.js"></script>
+    <script>
+        function checkChkBox() {
+            let frm = document.querySelector('.update-room-form');
+            var chkbx = document.querySelector('#chk-update-room-pwd');
+            if (chkbx.checked == true) {
+                frm.classList.add('show');
+            }
+            else {
+                frm.classList.remove('show');
+            }
+        }
+    </script>
+</html>
