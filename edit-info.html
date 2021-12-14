@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="index-style.css">
     <link rel="stylesheet" href="reponsive.css">
-    <title>Information</title>
+    <title>Edit Information</title>
 </head>
 <body>
     <header id="header">   
@@ -33,22 +33,42 @@
 
     <div class="content-info">
         <h1>Information</h1>
-        <div class="info-bx">
+        <form class="info-bx">
             <div class="img-user">
+                <label for="file-upload">
+                    <ion-icon name="camera"></ion-icon>
+                    <input type="file" id="file-upload">
+                </label>
                 <img id="avatar-info" src="./imgs/Logo_Group_MRL_01.png" alt="">    
             </div> 
             <div class="config-info">
-                <p class="p-info">User Name: <span>Admin</span></p>  
-                <p class="p-info">Day Of Birth: <span>14/08/2001</span></p>  
-                <div class="btn-info">
-                    <a href="">Update</a>
-                    <a href="">Change Password</a>
+                <label for="datepicker">User Name: <input type="text" id="user-name-info"></label>  
+                <label for="datepicker">Day of birth: <input type="date" id="datepicker"></label>  
+                <div class="btn">
+                    <a href="">Confirm</a>
+                    <a href="">Cancel</a>
                     <a class="btn-delete-acc" href="">Delete Account</a>
                 </div>          
             </div>              
-        </div>         
+        </form>         
     </div>
 </body>
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 <script src="./main-script.js"></script>
+<script>
+    let btnFile = document.querySelector("#file-upload");
+    let img = document.querySelector("#avatar-info");
+
+    btnFile.addEventListener('change', function() {
+        const file = this.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const result = reader.result;
+                img.src = result;
+            }
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
 </html>

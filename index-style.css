@@ -912,6 +912,16 @@ footer P a:hover {
     z-index: 1;
 }
 
+.content-info .info-bx .config-info .p-info {
+    color: var(--white1);
+    line-height: 1.5em;
+    font-size: 1.2em;
+}
+
+.content-info .info-bx .config-info .p-info span {
+    font-weight: 700;
+}
+
 .content-info .info-bx .config-info label {
     display: block;
     height: 30px;
@@ -928,12 +938,11 @@ footer P a:hover {
     height: 30px;    
 }
 
-.content-info .info-bx .config-info .btn {
+.content-info .info-bx .config-info .btn-info {
     margin-top: 20px;
-    text-align: center;
 }
 
-.content-info .info-bx .config-info .btn a {
+.content-info .info-bx .config-info .btn-info a {
     display: inline-block;
     padding: 5px 10px;
     background-color: var(--light-black1);
@@ -942,7 +951,16 @@ footer P a:hover {
     transition: linear 0.2s;
 }
 
-.content-info .info-bx .config-info .btn a:hover {
+.content-info .info-bx .config-info .btn-info .btn-delete-acc {
+    margin-top: 10px;
+    background-color: var(--blue1);
+    color: var(--black2);
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.content-info .info-bx .config-info .btn-info a:hover {
     background-color: var(--blue1);
     color: var(--black2);
 }
